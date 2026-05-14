@@ -527,12 +527,15 @@
     var correct = "Off2Marbs!";
     var entered = sessionStorage.getItem("auth");
     if (entered !== correct) {
+      document.body.style.display = "none";
       entered = prompt("Enter password to access this page:");
       if (entered !== correct) {
-        document.body.innerHTML = "<p style='font-family:sans-serif;text-align:center;margin-top:20vh;'>Access denied.</p>";
+        document.body.style.display = "";
+        document.body.innerHTML = "<p style='font-family:sans-serif;text-align:center;margin-top:20vh;color:#333;'>Incorrect password. Please refresh to try again.</p>";
         return;
       }
       sessionStorage.setItem("auth", correct);
+      document.body.style.display = "";
     }
   })();
 </script>
