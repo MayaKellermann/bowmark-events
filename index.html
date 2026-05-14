@@ -522,7 +522,20 @@
   </style>
 </head>
 <body>
-
+<script>
+  (function() {
+    var correct = "Off2Marbs!";
+    var entered = sessionStorage.getItem("auth");
+    if (entered !== correct) {
+      entered = prompt("Enter password to access this page:");
+      if (entered !== correct) {
+        document.body.innerHTML = "<p style='font-family:sans-serif;text-align:center;margin-top:20vh;'>Access denied.</p>";
+        return;
+      }
+      sessionStorage.setItem("auth", correct);
+    }
+  })();
+</script>
 <!-- ═══ NAV — Bowmark motif (32×32, transparent SVG) ═══ -->
 <nav class="nav">
   <button class="nav-logo-btn" onclick="showPage('home')" aria-label="Home">
