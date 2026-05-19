@@ -72,8 +72,7 @@
 
   <!-- Your page content goes here — hidden until correct password entered -->
   <div id="content" style="display:none; width:100%;">
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en-GB"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1899,25 +1898,6 @@ a:active .li-icon { opacity: 0.7; }
     </div>
     <div class="legal">© 2026 · Invitation only</div>
   </div>
-
- </div>
-
-  <script>
-    function check() {
-      const input = document.getElementById('pwd').value;
-      if (input === 'TestRun') {
-        document.getElementById('gate').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-      } else {
-        document.getElementById('err').style.display = 'block';
-        document.getElementById('pwd').value = '';
-        document.getElementById('pwd').focus();
-      }
-    }
-  </script>
-
-</body>
-</html>
 </footer>
 
 <script>
@@ -2001,6 +1981,23 @@ a:active .li-icon { opacity: 0.7; }
   document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 </script>
 
+</div>
 
+  <script>
+    function check() {
+      const input = document.getElementById('pwd').value;
+      if (input === 'TestRun') {
+        document.getElementById('gate').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      } else {
+        document.getElementById('err').style.display = 'block';
+        document.getElementById('pwd').value = '';
+        document.getElementById('pwd').focus();
+      }
+    }
+  </script>
+
+</body>
+</html>
 
 </body></html>
